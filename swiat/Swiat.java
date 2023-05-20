@@ -179,7 +179,7 @@ public class Swiat {
         frame.repaint();
     }
     public void rysujSwiat() {
-        frame = new JFrame("Labolatorium otwarte 2 - Piotr Kijoch 197226");
+        frame = new JFrame("Wirtualny Swiat");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         panelGlowny = new JPanel(new GridBagLayout());
@@ -189,7 +189,6 @@ public class Swiat {
         scrollGridPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
 
         String message = "<html>" +
-                "<p>Autor: Piotr Kijoch 197226</p>" +
                 "<p>Sterowanie: </p>" +
                 "<p>Czlowiek oznaczony litera 'H' i kolorem czerwonym" +
                 "<p>Strzalki - Ruch czlowieka</p>" +
@@ -271,7 +270,6 @@ public class Swiat {
                     }
                     Czlowiek czlowiek = (Czlowiek)zworcCzlowieka(organizmy);
                     czlowiek.ustawFocusKlawiatury();
-                    //JOptionPane.showMessageDialog(frame, "Dane wczytane pomyslnie!", "Czytaj dane", JOptionPane.INFORMATION_MESSAGE);
                 }
             }
         });
@@ -342,9 +340,9 @@ public class Swiat {
             @Override
             public int compare(Organizm o1, Organizm o2) {
                 if (o1.getInicjatywa() != o2.getInicjatywa()) {
-                    return Integer.compare(o2.getInicjatywa(), o1.getInicjatywa()); // Descending
+                    return Integer.compare(o2.getInicjatywa(), o1.getInicjatywa());
                 } else {
-                    return Integer.compare(o1.getTuraUrodzenia(), o2.getTuraUrodzenia()); // Ascending
+                    return Integer.compare(o1.getTuraUrodzenia(), o2.getTuraUrodzenia());
                 }
             }
         });
